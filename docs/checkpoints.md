@@ -1,25 +1,32 @@
 # Checkpoints
 
+All EviDS checkpoints are in a single Google Drive folder:  
+→ **[EviDS-UAV Checkpoints on Google Drive](https://drive.google.com/drive/folders/1WNrKHYwXNDiX4JuhEb1rKxSO24fy-KWJ?usp=sharing)**
+
+Each experiment fork also has its own `CHECKPOINTS.md` with the specific file listing.
+
+---
+
 ## E1 — EDTC-EviDS (Thermal SOT)
 
-| Checkpoint | Description | Source |
-|-----------|-------------|--------|
-| `pretrained_models/yolo_edl_270.pt` | YOLOv5s + evidential head, epoch 270 | [Google Drive — to be added] |
-| `pretrained_models/yolo_270.pt` | YOLOv5s baseline (sigmoid), epoch 270 | [Google Drive — to be added] |
+| File | Description |
+|------|-------------|
+| `pretrained_models/yolo_edl_270.pt` | YOLOv5s + evidential head, epoch 270 |
+| `pretrained_models/yolo_sigmoid_270.pt` | YOLOv5s baseline (sigmoid), epoch 270 |
 
-Download and place under `EDTC-EviDS/pretrained_models/`.
+Place under `EDTC-EviDS/pretrained_models/`.
 
 ---
 
 ## E2 — TRIDENT-EviDS (Multimodal classification)
 
-| Directory | Description | Source |
-|-----------|-------------|--------|
-| `save_unimodals/` | Baseline unimodal checkpoints (3 seeds) | [Google Drive — to be added] |
-| `save_unimodals_edl/` | EDL unimodal checkpoints (3 seeds) | [Google Drive — to be added] |
-| `save_tri-modals/` | DS fusion checkpoints (3 seeds) | [Google Drive — to be added] |
+| Directory | Description |
+|-----------|-------------|
+| `save_unimodals/` | Baseline unimodal checkpoints (3 seeds × 3 modalities) |
+| `save_unimodals_edl/` | EDL unimodal checkpoints (3 seeds × 3 modalities) |
+| `save_tri-modals/` | DS fusion checkpoints (3 seeds) |
 
-Download and place under `TRIDENT-EviDS/`.
+Place under `TRIDENT-EviDS/`.
 
 ---
 
@@ -28,13 +35,18 @@ Download and place under `TRIDENT-EviDS/`.
 Stage 1 (feature extractor) and conditions (a) and (b) use the **original authors' checkpoints**:  
 → [MM-UAV authors' Google Drive](https://drive.google.com/drive/folders/1MaQk8MA_63wHam6Bwr44NYHIg4pPl1qd)
 
-| Condition | Description | Source |
-|-----------|-------------|--------|
-| Stage 1 | `yolox_s_2_stream` — two-stream feature extractor | Authors' Drive (see above) |
-| (a) def-tuning | `yolox_s_2_def-tuning-fusion-head` | Authors' Drive (see above) |
-| (b) stn-tuning | `yolox_s_2_stn-tuning-fusion-head` | Authors' Drive (see above) |
-| (c) evidential ADFM | `yolox_s_2_evidential_adfm` | [Google Drive — to be added] |
-| (d) evidential average | `yolox_s_2_evidential_average` | [Google Drive — to be added] |
-| (e) evidential DS | `yolox_s_2_evidential_ds` | [Google Drive — to be added] |
+| Condition | Directory |
+|-----------|-----------|
+| Stage 1 | `yolox_s_2_stream` — two-stream feature extractor |
+| (a) def-tuning | `yolox_s_2_def-tuning-fusion-head` |
+| (b) stn-tuning | `yolox_s_2_stn-tuning-fusion-head` |
 
-Download and place under `MM-UAV-EviDS/YOLOX_outputs/<condition>/`.
+EviDS conditions (c)–(e) are in the main EviDS Drive folder above:
+
+| Condition | Directory |
+|-----------|-----------|
+| (c) evidential ADFM | `yolox_s_2_evidential_adfm` |
+| (d) evidential average | `yolox_s_2_evidential_average` |
+| (e) evidential DS | `yolox_s_2_evidential_ds` |
+
+Place under `MM-UAV-EviDS/YOLOX_outputs/<condition>/`.
